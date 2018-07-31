@@ -1,0 +1,99 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<form method="post">
+	{% csrf_token %}
+	
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<div class="form-group">
+				<label for="{{form2.nombre.name}}">{{form2.nombre.label}}</label>
+				{{form2.nombre}}
+			</div>
+		</div>
+		<div class="col-md-8 col-md-offset-2">
+			<div class="form-group">
+				<label for="{{form2.nombre.apellidos}}">{{form2.apellidos.label}}</label>
+				{{form2.apellidos}}
+			</div>
+		</div>
+		<div class="col-md-8 col-md-offset-2">
+			<div class="form-group">
+				<label for="{{form2.edad.name}}">{{form2.edad.label}}</label>
+				{{form2.edad}}
+			</div>
+		</div>
+		<div class="col-md-8 col-md-offset-2">
+			<div class="form-group">
+				<label for="{{form2.email.name}}">{{form2.email.label}}</label>
+				{{form2.email}}
+			</div>
+		</div>
+		<div class="col-md-8 col-md-offset-2">
+			<div class="form-group">
+				<label for="{{form2.telefono.name}}">{{form2.telefono.label}}</label>
+				{{form2.telefono}}
+			</div>
+		</div>
+		<div class="col-md-8 col-md-offset-2">
+			<div class="form-group">
+				<label for="{{form2.domiclio.name}}">{{form2.domicilio.label}}</label>
+				{{form2.domicilio}}
+			</div>
+		</div>
+		<div class="col-md-8 col-md-offset-2">
+			<div class="form-group">
+				<label for="{{form.latitud.name}}">{{form.latitud.label}}</label>
+				{{form.latitud}}
+			</div>
+		</div>
+		<div class="col-md-8 col-md-offset-2">
+			<div class="form-group">
+				<label for="{{form.longitud.name}}">{{form.longitud.label}}</label>
+				{{form.longitud}}
+			</div>
+		</div>
+		<div class="col-md-8 col-md-offset-2">
+			<div class="form-group">
+				<label for="{{form.fecha_creacion.name}}">{{form.fecha_creacion.label}}</label>
+				{{form.fecha_creacion}}
+			</div>
+		</div>
+		<div class="col-md-8 col-md-offset-2">
+			<div class="form-group">
+				<label for="{{form.altitud.name}}">{{form.altitud.label}}</label>
+				{{form.altitud}}
+			</div>
+		</div>
+		<div class="col-md-8 col-md-offset-2">
+			<div class="form-group">
+				<label for="{{form.velocidad.name}}">{{form.velocidad.label}}</label>
+				{{form.velocidad}}
+			</div>
+		</div>
+		<div class="col-md-8 col-md-offset-2">
+			<div class="form-group">
+				<label for="{{form.direccion_brujula.name}}">{{form.direccion_brujula.label}}</label>
+				{{form.direccion_brujula}}
+			</div>
+		</div>
+		<div class="col-md-8 col-md-offset-2">
+			<div class="form-group">
+				<label for="{{form.precision.name}}">{{form.precision.label}}</label>
+				{{form.precision}}
+			</div>
+		</div>
+		<div class="col-md-8 col-md-offset-2">
+			<div class="form-group">
+				<label for="{{form.proveedor.name}}">{{form.proveedor.label}}</label>
+				{{form.proveedor}}
+			</div>
+		</div>
+	</div>
+	<div class="col-md-8 col-md-offset-2">
+			<div class="form-group">
+				<button class="btn btn-primary" type="submit">Guardar</button>
+			</div>
+		</div>
+</form>
+{% endblock %}

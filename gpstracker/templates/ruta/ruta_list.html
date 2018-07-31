@@ -1,0 +1,47 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<td>No. Ruta</td>
+			<td>Nombre</td>
+			<td>Latitud</td>
+			<td>Longitud</td>
+			<td>Fecha</td>
+			<td>Altitud</td>
+			<td>Velocidad</td>
+			<td>Orientación</td>
+			<td>Proveedor</td>
+			<td>Acciones</td>
+		</tr>
+		
+	</thead>
+	<tbody>
+		{% if object_list %}
+		{% for ruta in object_list %}
+		<tr>
+			<td>{{ ruta.id }}</td>
+			<td>{{ ruta.persona.nombre }} {{ruta.persona.apellidos}}</td>
+			<td>{{ ruta.latitud }}</td>
+			<td>{{ ruta.longitud }}</td>
+			<td>{{ ruta.fecha_creacion }}</td>
+			<td>{{ ruta.altitud }}</td>
+			<td>{{ ruta.velocidad }}</td>
+			<td>{{ ruta.direccion_brujula }}</td>
+			<td>{{ ruta.proveedor }}</td>
+			<td>
+				<a class="btn btn-primary" href="#">Editar</a>
+				<a class="btn btn-danger" href="#">Eliminar</a>
+			</td>
+		</tr>
+		{% endfor %}
+		
+		{% else %}
+		<h1>No hay registros de rutas</h1>
+		{% endif %}
+	</tbody>
+</table> 
+
+{% endblock%}
