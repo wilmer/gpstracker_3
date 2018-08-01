@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '&jrv#fht82^8d-1)f%^nt%@a^nt!a9tet@ler2g&vp42@e%(iu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = false
 
 ALLOWED_HOSTS = []
 
@@ -81,10 +81,10 @@ WSGI_APPLICATION = 'gpstracker.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'gpsdata',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
-        'HOST': 'localhost',
+        'NAME': 'd76kavhplqkvqt',
+        'USER': 'mvjczpcvoxcfve',
+        'PASSWORD': '8dc4a839c3b7a1df482118d4ebb24dae6dcbbf087e67f820ab3a11ed9b0c6ee5',
+        'HOST': 'ec2-23-23-242-163.compute-1.amazonaws.com',
         'PORT': 5432,
     }
 }
